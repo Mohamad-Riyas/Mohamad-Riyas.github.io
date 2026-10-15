@@ -73,7 +73,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     // Required for GitHub Pages project repositories.
-    base: '/My-Portfolio/',
+    base: '/',
 
     plugins: [
       react(),
