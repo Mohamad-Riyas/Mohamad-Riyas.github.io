@@ -22,7 +22,7 @@ export const projects: Project[] = [
     ],
     links: [
       { label: 'Repository', href: 'https://github.com/Mohamad-Riyas/Project-SyncSpace', kind: 'repo' },
-      { label: 'Original team repository', href: 'https://github.com/Axlero-G17-26/project-1-syncspace', kind: 'reference' },
+      { label: 'Original team repository', href: 'https://github.com/Nivo16/SyncSpace_Workplace_AxleroProject1', kind: 'reference' },
     ],
     contribution:
       'Team project. The original platform was built by the Axlero G17 team; Mohamad maintains a derived repository focused on production hardening and extending the product.',
