@@ -59,6 +59,9 @@ export default function Hero() {
 
       <div className="mx-auto flex w-full max-w-6xl flex-1 items-center px-5 sm:px-8">
         <div className="max-w-xl py-10 lg:py-0">
+          <motion.div {...item(0)} className="avatar-ring mb-6 size-28 sm:size-32">
+            <img src="/profile.jpg" alt="Portrait of Mohamad Riyas" width={256} height={256} className="size-full rounded-full object-cover object-top" />
+          </motion.div>
           <motion.p {...item(0)} className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 font-mono text-xs text-muted">
             <span className="size-1.5 rounded-full bg-primary" aria-hidden /> Final-year BEng (Hons) Software Engineering
           </motion.p>
