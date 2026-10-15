@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Background video */
+img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.5);
+    object-fit: cover;
+}
+
+/* Dark overlay for readability */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Main content */
+.content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#countdown {
+    padding: 20px 40px;
+    border: 2px solid #0ff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #0ff, inset 0 0 10px #0ff;
+    animation: glow 2s infinite alternate;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #0ff, inset 0 0 5px #0ff; }
+    to   { box-shadow: 0 0 25px #0ff, inset 0 0 15px #0ff; }
+}
+
+/* Progress bar container */
+.progress-container {
+    width: 80%;
+    max-width: 600px;
+    height: 25px;
+    border: 2px solid rgb(209, 219, 219);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0ff;
+    background: rgba(0, 255, 255, 0.1);
+}
+
+/* Animated progress bar */
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: repeating-linear-gradient(
+    -45deg,
+    rgb(255, 0, 0),
+    rgb(0, 0, 0) 10px,
+    rgb(255, 255, 255) 10px,
+    rgb(0, 0, 0) 20px
+    );
+    background-size: 40px 40px;
+    animation: stripes 1s linear infinite;
+    transition: width 1s linear;
+}
+
+@keyframes stripes {
+    from { background-position: 0 0; }
+    to { background-position: 40px 0; }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    #countdown { font-size: 1.5rem; padding: 15px 25px; }
+}
