@@ -64,7 +64,7 @@ export default function Nav({ onHome }: { onHome: boolean }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18 }}
-            className="glass mx-auto mt-2 max-w-6xl rounded-2xl p-3 lg:hidden"
+            className="mx-auto mt-2 max-w-6xl rounded-2xl border border-white/10 bg-[#0f1624] p-3 shadow-2xl shadow-black/60 lg:hidden"
             style={{ width: 'calc(100% - 1.5rem)' }}
           >
             <ul className="grid gap-1">
